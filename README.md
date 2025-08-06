@@ -59,4 +59,4 @@ Este é um projeto web estático, o que torna sua execução muito simples.
 
 1. Clone o repositório para a sua máquina local:
    ```sh
-   git clone [https://github.com/seu-usuario/causa-consciente.git](https://github.com/seu-usuario/causa-consciente.git)
+   git clone https://github.com/Kelly20003/PROJETO-CAUSA-CONSCIENTE.git
