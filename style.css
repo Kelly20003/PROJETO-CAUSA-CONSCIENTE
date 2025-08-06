@@ -1,0 +1,234 @@
+/* --- CONFIGURAÇÕES GERAIS E FONTES --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #002EFF;
+    color: white;
+    overflow-x: hidden;
+}
+
+.main-container {
+    padding: 2rem 4rem;
+    min-height: 100vh;
+}
+
+/* --- HEADER E FOOTER (COMUNS A TODAS AS PÁGINAS) --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.logo-area {
+    font-size: 0.9rem;
+    line-height: 1.2;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    transition: opacity 0.3s;
+    padding: 0.5rem;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover {
+    opacity: 0.8;
+}
+
+nav a.active {
+    border-bottom-color: #BEF264; /* Destaque para página ativa */
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* --- ESTILOS DA PÁGINA INICIAL (INDEX.HTML) --- */
+.hero-section {
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.main-title {
+    font-size: clamp(3.5rem, 10vw, 7rem);
+    font-weight: 900;
+    line-height: 1;
+    color: white;
+    text-shadow: 4px 4px 10px rgba(0,0,0,0.2);
+}
+
+.main-title .hashtag {
+    color: #BEF264;
+    font-weight: 400;
+}
+
+.subtitle {
+    max-width: 600px;
+    margin: 1.5rem auto 0 auto;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.info-section {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 4rem;
+    flex-wrap: wrap;
+}
+
+.info-card {
+    background-color: white;
+    color: #333;
+    border-radius: 20px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.card-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+}
+
+.info-card h2 {
+    font-size: 1.5rem;
+    color: #002EFF;
+    margin-bottom: 1rem;
+}
+
+.info-card p {
+    flex-grow: 1;
+    margin-bottom: 2rem;
+}
+
+.card-footer {
+    font-weight: 700;
+    background-color: #BEF264;
+    color: #333;
+    padding: 0.8rem 1.5rem;
+    border-radius: 20px;
+}
+
+/* --- ESTILOS DAS PÁGINAS DE CONTEÚDO (HORTA, DOAÇÃO, SOBRE) --- */
+.content-page {
+    background-color: white;
+    color: #333;
+    border-radius: 20px;
+    padding: 3rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.content-page h1 {
+    color: #002EFF;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 3px solid #BEF264;
+    padding-bottom: 1rem;
+}
+
+.page-intro {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 3rem;
+}
+
+.content-section {
+    margin-bottom: 2.5rem;
+}
+
+.content-section h2 {
+    color: #002EFF;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.content-section h3 {
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.content-section p, .content-section li {
+    line-height: 1.8;
+    color: #444;
+}
+
+.content-section ul {
+    list-style-position: inside;
+    padding-left: 1rem;
+}
+
+.donation-spot {
+    background-color: #f4f4f9;
+    border-left: 5px solid #002EFF;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    border-radius: 5px;
+}
+.donation-spot h3 {
+    margin: 0 0 0.5rem 0;
+}
+
+/* --- DESIGN RESPONSIVO --- */
+@media (max-width: 768px) {
+    .main-container {
+        padding: 1.5rem;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .content-page {
+        padding: 2rem;
+    }
+
+    .content-page h1 {
+        font-size: 2rem;
+    }
+}
